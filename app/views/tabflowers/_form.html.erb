@@ -1,0 +1,49 @@
+<%= form_for(@tabflower) do |f| %>
+  <% if @tabflower.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tabflower.errors.count, "error") %> prohibited this tabflower from being saved:</h2>
+
+      <ul>
+      <% @tabflower.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   名称：
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+   寓意：
+    <%= f.text_field :mean %>
+  </div>
+  <div class="field">
+  价格：
+    <%= f.text_field :origin_price %>
+  </div>
+  <div class="field">
+    编号：
+    <%= f.text_field :img %>
+  </div>
+  <div class="field">
+   详细：
+    <%= f.text_field :detail %>
+  </div>
+  <div class="field">
+   材料：
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+   包装：
+    <%= f.text_field :packaging %>
+  </div>
+  <div class="field">
+  价格：
+    <%= f.text_field :current_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

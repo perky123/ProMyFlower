@@ -1,0 +1,7 @@
+
+    <% if @tabuser==nil then %>
+      <%form_tag "/tabusers/login", class: "form-login"  do %>
+        <%= text_field :tabuser,:name,:class=>"txt",:size=>"10", class: "input-text" %>
+        <%= text_field :tabuser,:password,:class=>"txt" ,:size=>"12",:type=>"password" ,class: "input-text"%>
+      <% end %>
+    <% end %>

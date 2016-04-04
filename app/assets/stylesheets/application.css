@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+require 'css'
+require 'register'
+require 'scaffold'
+require 'scaffolds'
+require 'tabflowers'
+require 'tabusers'
+require 'details/css'
+require 'index/css'

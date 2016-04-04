@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>ProMyFlower</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tag %>
 </head>
 <body class="twoColFixLtHdr">
@@ -11,13 +10,13 @@
   <div id="header">    
     <div class="bg" >
       <div class="divHead1"> <IMG border=0 src="/index/i2.gif"
-                 width=64 height=22 /> <IMG border=0 src="/index/i3.gif"
-                 width=63 height=22 /> <IMG border=0 src="/index/i4.gif"
-                 width=63 height=22 /> <IMG border=0 src="/index/i5.gif"
-                 width=86 height=22 /> <IMG border=0 src="/index/i6.gif"
-                 width=86 height=22 /> <img border=0 src="/index/i7.gif"
-                 width=86  height=22 /> <IMG border=0 src="/index/i8.gif"
-                 width=90 height=22 /> </div>
+         width=64 height=22 /> <IMG border=0 src="/index/i3.gif"
+         width=63 height=22 /> <IMG border=0 src="/index/i4.gif"
+         width=63 height=22 /> <IMG border=0 src="/index/i5.gif"
+         width=86 height=22 /> <IMG border=0 src="/index/i6.gif"
+         width=86 height=22 /> <img border=0 src="/index/i7.gif"
+         width=86  height=22 /> <IMG border=0 src="/index/i8.gif"
+         width=90 height=22 /> </div>
       <div class="divHead2">
         <TABLE border=0 cellSpacing=0 cellPadding=0 align=left height=23>
           <TR align=middle>
@@ -46,24 +45,24 @@
     <div class="divleftLogin">
       <%form_tag "/tabusers/login"  do %>
       <div class="divleft1">
-        <%= text_field :tabuser,:uName,:class=>"txt",:size=>"10" %>
+        <%= text_field :tabuser,:name,:class=>"txt",:size=>"10" %>
         <div class="divTab"></div>
-        <%= text_field :tabuser,:uPass,:class=>"txt" ,:size=>"12",:type=>"password"%>
+        <%= text_field :tabuser,:password,:class=>"txt" ,:size=>"12",:type=>"password"%>
       </div>
 
       <div class="divleftBtn">
         <%= submit_tag '',:class=>"Appbtn"%>
-                               <a href="/tabusers/register">                                
-                                 <IMG
-                                border=0 src="/index/i18.gif" width=80
-                                height=22></A> </div>
+           <a href="/tabusers/register">                                
+             <IMG
+            border=0 src="/index/i18.gif" width=80
+            height=22></A> </div>
            <% end %>
       <div class="divleftCart"><a href="/tabflowers/checkout" class="link">查看购物车</a></div>
     </div>
     <div class="divleftShopp"> </div>
         <% else %>
     <div class="divleftLogin1">
-      <div class="divleftLogin1CK"><font color="red" size="2";>您好， <%=@tabuser.uName %>:<br>&nbsp;&nbsp;您已经成功登录!
+      <div class="divleftLogin1CK"><font color="red" size="2";>您好， <%=@tabuser.name %>:<br>&nbsp;&nbsp;您已经成功登录!
       </font><br>
      <font color="red"> 我们的宗旨是：<br>您就是我们的上帝</font>
         <% if @tabuser!=nil then %>
@@ -84,5 +83,6 @@
   </div>
   <!-- end #container -->
 </div>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

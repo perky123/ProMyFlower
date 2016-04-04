@@ -22,7 +22,7 @@
     <tr><td>共<%=@totalJY %>页，共<%= @totalTS %>条，每页显示<%=@perPage %>条</td><td><%= will_paginate @tabflowers,:prev_label=> "上一页",:next_label=>:"下一页" %></td></tr>
 </table>
         <% if @tabuser!=nil then %>
-    <% if @tabuser.uName=="dcy" then %>
+    <% if @tabuser.name=="dcy" then %>
 <%= link_to '添加商品', new_tabflower_path,:class=>"registerDivBtn" %>
 <% end %>
     <% end %>

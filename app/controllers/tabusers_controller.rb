@@ -1,10 +1,10 @@
 class TabusersController < ApplicationController
 
 	def login
-		uname=params[:tabuser][:uName]
-		upass=params[:tabuser][:uPass]
+		name=params[:tabuser][:name]
+		password=params[:tabuser][:password]
 		session[:tabuser]=nil
-		user=Tabuser.find_by_uName_and_uPass(uname,upass)
+		user=Tabuser.find_by_name_and_password(name,password)
 	  if user
 	    session[:tabuser]=user
 	    session[:tabuserId]=user.id
@@ -24,17 +24,19 @@ class TabusersController < ApplicationController
 
   def registerUser
     @new_user=Tabuser.new()
-    @new_user.uName=params[:tabuser][:name]
-    @new_user.uPass=params[:tabuser][:pass]
-    @new_user.uTname=params[:tabuser][:tname]
-    @new_user.uAddress=params[:tabuser][:address]
-    @new_user.uCode=params[:tabuser][:code]
-    @new_user.uPhone=params[:tabuser][:phone]
-    @new_user.uEmail=params[:tabuser][:email]
-    @new_user.uAddressType=params[:tabuser][:type]
+    @new_user.name=params[:tabuser][:name]
+    @new_user.password=params[:tabuser][:pass]
+    @new_user.true_name=params[:tabuser][:tname]
+    @new_user.address=params[:tabuser][:address]
+    @new_user.code=params[:tabuser][:code]
+    @new_user.phone=params[:tabuser][:phone]
+    @new_user.email=params[:tabuser][:email]
+    @new_user.address_type=params[:tabuser][:type]
     if @new_user.save
       redirect_to :action=>"register"
-      flash[:notice]="恭喜您"+@new_user.uName+"，会员注册成功!"    
+      flash[:notice]="恭喜您"+@new_user.name+"，会员注册成功!"
+    else
+      redirect_to :action=>"register"
     end
   end
 

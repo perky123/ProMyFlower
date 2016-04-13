@@ -28,6 +28,8 @@
             <TD background=/index/i13.gif width=73><A class=link  href="#">自助订花</A></TD>
             <TD background=/index/i13.gif width=73><A class=link  href="#" >鲜花常识</A></TD>
             <TD background=/index/i13.gif width=73><A class=link href="#">团购服务</A></TD>
+            <TD background=/index/i13.gif width=73><a href="/tabflowers/checkout" class="link">查看购物车</a></TD>
+            <TD background=/index/i13.gif width=73><a href="/tabusers/exit" class="link">退出</a></TD>
           </TR>
         </TABLE>
       </div>
@@ -52,12 +54,11 @@
 
       <div class="divleftBtn">
         <%= submit_tag '',:class=>"Appbtn"%>
-           <a href="/tabusers/register">                                
-             <IMG
-            border=0 src="/index/i18.gif" width=80
-            height=22></A> </div>
-           <% end %>
-      <div class="divleftCart"><a href="/tabflowers/checkout" class="link">查看购物车</a></div>
+           <A href="/tabusers/register">
+             <IMG border=0 src="/index/i18.gif" width=80 height=22>
+          </A> 
+      </div>
+        <% end %>
     </div>
     <div class="divleftShopp"> </div>
         <% else %>

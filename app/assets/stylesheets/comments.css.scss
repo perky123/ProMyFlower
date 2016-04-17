@@ -1,0 +1,95 @@
+.products_comment {
+  
+  .new_comment {
+    float: right;
+  }
+  
+  .order_img {
+    margin: 30px;
+  }
+  
+  .comment_submit {
+    float: right;
+    margin-right: 30px;
+    
+    .comment_textarea {
+      width: 316px;
+      height: 80px;
+      padding: 10px 16px;
+      border: 1px solid #e0e0e0;
+      font-size: 12px;
+      line-height: 18px;
+      color:#a9aab1;
+      resize: none;
+      &:focus{
+        outline: 0;
+        border-color:#ff6700;
+      }
+    }
+  }
+  
+  .comment_btn_wrap {
+    height: 18px;
+    
+    .comment_btn {
+      position: absolute;
+      margin-top: 107px;
+      padding: 1px 0;
+      background: #ff6700;
+      color: #fff;
+      border-color: #ff6700;
+      border: none;
+      width: 40px;
+      text-align: center;
+      cursor:pointer;
+    }
+  }
+  
+  .comment_content {
+    width: 316px;
+    height: 80px;
+    padding: 10px 16px;
+    border: 1px solid #e0e0e0;
+    font-size: 12px;
+    line-height: 18px;
+    color:#a9aab1;
+    resize: none;
+    float: right;
+    margin-right: 30px;
+  }
+  
+  .comment_btn_back { 
+    float: right;
+    line-height: 15px;
+       
+    a {
+      color: #fff;
+      position: absolute;
+      margin-top: 107px;
+      padding-top: 2px;
+      background: #757575;
+      width: 40px;
+      text-align: center;
+      cursor:pointer;
+      font-size: 12px;
+    }
+  }
+  
+  #error_message {
+    color: #ff6700;
+    font-size: 12px;
+    float: right;
+    margin-right: 20px;
+    line-height: 15px;
+    
+    
+    ul {
+      padding-top: 7px;
+      
+      li {
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+}

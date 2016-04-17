@@ -7,3 +7,4 @@ require prototype
 require rails
 require tabflowers
 require tabusers
+require 'js'

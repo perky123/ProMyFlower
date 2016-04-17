@@ -1,0 +1,38 @@
+ <div class="topbar">
+     <div class="container">
+       <div class="pull-right">
+          <% if @tabuser.nil? %>
+               <%= link_to "登陆", logon_tabusers_path %> | <%= link_to "注册", register_tabusers_path %>
+              <% else %>
+                <%= link_to @tabuser.name.presence || "Guest", my_path %> | <%= link_to "退出", logout_path %>
+          <% end %>
+
+       </div>
+       <div class="pull-left">
+         <%= link_to "花店官网", root_path %> | <%= link_to "天猫店", "#" ,id: "go_taobao"%></a> | <%= link_to "京东店", "#" ,id: "go_jd"%></a>
+       </div>
+     </div>
+ </div>
+ <div class="container">
+   <div class="header">
+      <%= link_to checkout_tabflowers_path, class: "cart pull-right"  do %>
+        购物车
+      <% end -%>
+     <div class="clr"></div>
+   </div>
+   <div class="nav">
+    <div class="all-ProductCategory pull-left">
+      <%= link_to "全部商品", tabflowers_path %>
+    </div>
+    <ul class="nav-bar pull-left">
+      <li><%= link_to "首页", root_path %></li>
+      <li class="<%= 'current' if request.fullpath =~ /^affiliate$/ %>"><%= link_to "招商加盟", "#" %></li>
+      <li class="<%= 'current' if request.fullpath =~ /^p\/electric_bowl/ %>"><%= link_to "鲜花常识", "#" %></li>
+      <li class="<%= 'current' if request.fullpath =~ /^p\/rice_barrel/ %>"><%= link_to "订单查询", "#" %></li>
+      <li class="<%= 'current' if request.fullpath =~ /^p\/dami$/ %>"><%= link_to "节日提醒", "#" %></li>
+      <li class="<%= 'current' if request.fullpath =~ /^p\/damitech$/ %>"><%= link_to "自助订花", "#"  %></li>
+      <li class="<%= 'current' if request.fullpath =~ /^c\/job/%>"><%= link_to "团购服务", "#" %></li>
+      <li class="<%= 'current' if request.fullpath =~ /^p\/contact/ %>"><%= link_to "联系我们", "#" %></li>
+    </ul>
+   </div>
+ </div>

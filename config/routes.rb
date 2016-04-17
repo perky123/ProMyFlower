@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # # See how all your routes lay out with "rake routes".
 
   # # You can have the root of your site routed with "root"
-  # root 'tbusers#index'
+  root 'tabflowers#index'
   # resources:tabusers do
   #   get 'register' => 'tabusers#new', :as => :register
   # end
@@ -31,13 +31,20 @@ Rails.application.routes.draw do
   # get "tabuser/register"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  resources :tabflowers
+
+  resources :tabflowers do
+    collection do 
+      get :checkout
+    end
+  end
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   resources :tabusers do
       collection do
         get :logon
+        get :login
+        get :register
         post :registerUser
       end
   end

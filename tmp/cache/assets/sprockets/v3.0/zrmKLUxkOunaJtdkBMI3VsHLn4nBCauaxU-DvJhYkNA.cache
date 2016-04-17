@@ -1,0 +1,30 @@
+{:uriI"|file://app/assets/images/order/mystat.htm?type=text/html&id=db406acaa624ee79e0605176c00d331459576c15aadde88d9b6a4fbd406ca303:ET:load_pathI"app/assets/images;T:filenameI"'app/assets/images/order/mystat.htm;T:	nameI"order/mystat;T:logical_pathI"order/mystat.html;T:content_typeI"text/html;T:sourceI"å
+var ajstat_siteid	= '1'
+var ajstat_style	= '';
+var ajstat_url		= 'http://www.zgxhw.com/stat2.1/';
+var ajstat_ndate	= new Date();
+var ajstat_tzone	= 0 - ajstat_ndate.getTimezoneOffset()/60;
+var ajstat_tcolor	= screen.colorDepth;
+var ajstat_sSize	= screen.width + ',' + screen.height;
+var ajstat_referrer	= escape(document.referrer);
+var ajstat_outstr	= '<script language=javascript src='../ÖĞ¹úÏÊ»¨Íøorder_files/ + ajstat_url 
+			  + 'stat.asp?style=' + ajstat_style 
+			  + '&siteid=' + ajstat_siteid 
+			  + '&tzone=' + ajstat_tzone 
+			  + '&tcolor=' + ajstat_tcolor
+			  + '&sSize=' + ajstat_sSize
+			  + '&referrer=' + ajstat_referrer
+			  + '><\/script>';
+document.write(ajstat_outstr);
+
+function ajstatimgon(reftime){
+  var ttime=new Date();
+  var ajstat_img=new Image();
+  ajstat_img.src=ajstat_url+'stat_online.asp?siteid='+ajstat_siteid+'&o='+ttime.getDate+ttime.getMinutes +ttime.getSeconds;
+  var ajstatimgtimeout=setTimeout('ajstatimgon('+reftime+');',reftime);
+}
+ajstatimgon(40000);
+;T:metadata{	:dependencieso:Set:
+@hash{	I"environment-version;TTI"environment-paths;TTI"2processors:type=text/html&file_type=text/html;TTI"5file-digest://app/assets/images/order/mystat.htm;TT:charsetI"
+utf-8;F:digest"%	‹´d¹kBÎ‹iÇ6v(s¼„Ã8Ö m­k\'û‰:lengthiå:dependencies_digest"%Eî”ˆN¬ú4º"ğe^c{â±.P{$Pœß˜wÃé:idI"Edb406acaa624ee79e0605176c00d331459576c15aadde88d9b6a4fbd406ca303;F:
+mtimel+øÛUM

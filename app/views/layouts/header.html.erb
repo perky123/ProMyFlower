@@ -2,9 +2,11 @@
      <div class="container">
        <div class="pull-right">
           <% if @tabuser.nil? %>
-               <%= link_to "登陆", logon_tabusers_path %> | <%= link_to "注册", register_tabusers_path %>
-              <% else %>
-                <%= link_to @tabuser.name.presence || "Guest", my_path %> | <%= link_to "退出", logout_path %>
+            <%= link_to "登陆", logon_tabusers_path %> | <%= link_to "注册", registerUser_tabusers_path %>
+            aaaaaaaaaaaaaaaaaaaa
+          <% else %>
+            <%= link_to @tabuser[:name]%> | <%= link_to "退出", exit_tabusers_path %>
+            bbbbbbbbbbbbbbbbbbbbbb
           <% end %>
 
        </div>

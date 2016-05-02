@@ -14,10 +14,10 @@
             <%form_tag :action=>:updatecart  do %>
             <tr>
 <td><%=tabflower.id  %><%= text_field :tabflower,:id,:size=>0 ,:type=>"hidden" %></td>
-    <td><%=tabflower.name  %></td>
+    <td><%=tabflower.fName  %></td>
     <td><%= amount %></td>
-    <td><%= tabflower.current_price %></td>
-    <td><%= tabflower.origin_price %></td>
+    <td><%= tabflower.fPprice %></td>
+    <td><%= tabflower.fSPrice %></td>
     <td>
     </td>
     <td>     

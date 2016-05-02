@@ -4,6 +4,8 @@ class TabflowersController < ApplicationController
   def index
 #    @tabflowers = Tabflower.all
 #     @tabflowers=Tabflower.paginate :page =>1, :per_page => 1
+    # Rails.logger.info "#{session[:tabuser]}"
+    # Rails.logger.info "------------------------------------------------------"
     @tabflowers=Tabflower.paginate :page => params[:page], :per_page => 9
     sql="select count(*) from tabflowers"
     @totalTS=Tabflower.count_by_sql(sql)

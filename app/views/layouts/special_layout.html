@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= yield :title %></title>
+  <meta name="keywords" content=" <%= yield :keywords -%>" />
+  <meta name="description" content="<%= yield :description -%>" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="wb:webmaster" content="822a0db12040497b" />
+  <meta property="qc:admins" content="07713306415163371275453" />
+</head>
+<body>
+    <%= yield %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :script %>
+  <script type="text/javascript">
+
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?189a5c46e6962c5ec30e7cf870f8367b";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</body>
+</html>

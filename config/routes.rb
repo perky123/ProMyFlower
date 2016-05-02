@@ -45,7 +45,8 @@ Rails.application.routes.draw do
         get :logon
         get :login
         get :register
-        post :registerUser
+        get :registerUser
+        get :exit
       end
   end
   # Example resource route (maps HTTP verbs to controller actions automatically):
